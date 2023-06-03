@@ -57,3 +57,11 @@ class TestWin(QWidget):
     def next_click(self):
         self.hide()
         self.tw = TestWin()
+    def timerEvent(self):
+        global time
+        time = time.addSecs(-1)
+        self.text_timer.setText(time.toString("hh:mm:ss"))
+        self.text_timer.setFront(QFont("Times", 36, QFont.Bold))
+        self.text_timer.setStyleSheet("color: rgb(0, 0, 0)")
+        if time.toString("hh:mm:ss") == "00:00:00":
+            self.timer.stop()
