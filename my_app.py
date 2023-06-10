@@ -23,6 +23,7 @@ class MainWin(QWidget):
         self.v_line.addWidget(self.hello_text, alignment = Qt.AlignLeft)
         self.v_line.addWidget(self.instruction, alignment = Qt.AlignLeft)
         self.v_line.addWidget(self.button, alignment = Qt.AlignCenter)
+        
         self.setLayout(self.v_line)
     def connects(self):
         self.button.clicked.connect(self.next_click)
@@ -32,5 +33,5 @@ class MainWin(QWidget):
 
 app = QApplication([])
 main_win = MainWin()
-main_win.show()
+
 app.exec_()
