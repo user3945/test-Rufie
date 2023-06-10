@@ -15,4 +15,7 @@ class FinalWin(QWidget):
     def initUI(self):
         self.line = QVBoxLayout()
         self.txt_index = QLabel(txt_index)
-        self.txt_heartwork = QLabel(txt_heartwork)
+        self.txt_workheart = QLabel(txt_workheart)
+        self.line.addWidget(self.txt_index,alignment = Qt.AlignCenter)
+        self.line.addWidget(self.txt_workheart,alignment = Qt.AlignCenter)
+        self.setLayout(self.line)
